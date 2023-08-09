@@ -329,7 +329,7 @@ public class ReaderView extends AdapterView<Adapter>
     }
 
     public void onLongPress(MotionEvent e) {
-        enableSelectMode(e);
+//        enableSelectMode(e);
     }
 
     public void onShowPress(MotionEvent e) {

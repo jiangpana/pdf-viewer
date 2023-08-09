@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PDF Viewer Lite</string>
+    <string name="app_name">PDF Viewer </string>
     <string name="quit">Quit Application</string>
     <string name="dialog_button_retry">Retry</string>
     <string name="dialog_title_permision_denied">Permission Denied</string>

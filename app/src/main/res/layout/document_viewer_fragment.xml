@@ -152,12 +152,14 @@
             android:layout_centerHorizontal="true"
             android:background="?attr/readerControls">
 
+<!--            android:src="@drawable/ic_fullscreen_exit_white_24dp"-->
+
             <ImageView
                 android:id="@+id/seamlessMode"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
+                android:clickable="false"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_fullscreen_exit_white_24dp"
                 tools:ignore="ContentDescription" />
 
             <SeekBar

@@ -6,14 +6,14 @@
         android:icon="@drawable/ic_baseline_grid_view_24"
         android:title="@string/blank"
         app:showAsAction="always" />
-    <item
-        android:id="@+id/support_option"
-        android:icon="@drawable/ic_baseline_help_outline_24"
-        android:title="@string/pro"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/pro_option"
-        android:icon="@drawable/ic_diamond_shadow"
-        android:title="@string/pro"
-        app:showAsAction="always" />
+<!--    <item-->
+<!--        android:id="@+id/support_option"-->
+<!--        android:icon="@drawable/ic_baseline_help_outline_24"-->
+<!--        android:title="@string/pro"-->
+<!--        app:showAsAction="always" />-->
+<!--    <item-->
+<!--        android:id="@+id/pro_option"-->
+<!--        android:icon="@drawable/ic_diamond_shadow"-->
+<!--        android:title="@string/pro"-->
+<!--        app:showAsAction="always" />-->
 </menu>

@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         if (BillinUtils.isApplicationBought(this)) {
-            menu.findItem(R.id.pro_option).setVisible(false);
+//            menu.findItem(R.id.pro_option).setVisible(false);
         }
         MenuItem listGridMenuItem = menu.findItem(R.id.list_grid);
         if (shouldShowListGridOption) {
@@ -115,11 +115,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.pro_option) {
-            MessagingUtility.showBuyApplicationDailog(this);
-        } else if (item.getItemId() == R.id.support_option) {
-            MessagingUtility.showSupportDialog(this);
-        } else if (item.getItemId() == R.id.list_grid) {
+//        if (item.getItemId() == R.id.pro_option) {
+//            MessagingUtility.showBuyApplicationDailog(this);
+//        } else if (item.getItemId() == R.id.support_option) {
+//            MessagingUtility.showSupportDialog(this);
+//        } else
+            if (item.getItemId() == R.id.list_grid) {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
             boolean isListViewPreferred = preferences.getBoolean("isListViewPreferred", false);
             SharedPreferences.Editor edit = preferences.edit();
@@ -215,8 +216,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void openFragment(Fragment f) {
         Log.d("fragmentOpen", fragmentOpen);
-        buttonPanel.setVisibility(
-                (f instanceof BrowseFilesToolsFragment || f instanceof ResultsFragment) ? View.GONE : View.VISIBLE);
+//        buttonPanel.setVisibility(
+//                (f instanceof BrowseFilesToolsFragment || f instanceof ResultsFragment) ? View.GONE : View.VISIBLE);
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.frame_layout, f)
@@ -291,7 +292,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     openLibraryFragment(null);
                     findViewById(R.id.my_toolbar).setVisibility(View.VISIBLE);
-                    findViewById(R.id.buttonPanel).setVisibility(View.VISIBLE);
+                    findViewById(R.id.buttonPanel).setVisibility(View.GONE);
                 }
             }
         } else if (fragment instanceof BrowseFilesToolsFragment) {

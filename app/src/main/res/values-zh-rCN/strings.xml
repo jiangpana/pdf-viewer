@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PDF 查看器Lite</string>
+    <string name="app_name">PDF 查看器</string>
     <string name="quit">退出应用程序</string>
     <string name="dialog_button_retry">重试</string>
     <string name="dialog_title_permision_denied">权限被拒绝</string>

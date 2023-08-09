@@ -42,6 +42,8 @@ public class LibraryFragment extends Fragment {
         activity = (MainActivity) getActivity();
         toolbar = activity.findViewById(R.id.my_toolbar);
         tabHead = Arrays.asList(getString(R.string.recent_title), getString(R.string.favorite_title), getString(R.string.browse_title), getString(R.string.pdf_library_title), getString(R.string.epub_library_title), getString(R.string.tiff_library_title), getString(R.string.xps_library_title));
+//        tabHead = Arrays.asList(getString(R.string.pdf_library_title), getString(R.string.browse_title));
+//        tabHeadExtensions = Arrays.asList("", "", "", ".pdf", ".epub", ".tif,.tiff", ".xps,.oxps,.cbz,.fb2");
         tabHeadExtensions = Arrays.asList("", "", "", ".pdf", ".epub", ".tif,.tiff", ".xps,.oxps,.cbz,.fb2");
         toolbarHeads = Arrays.asList(getString(R.string.recent_files), getString(R.string.favorites), getString(R.string.browse_files), getString(R.string.pdf_library), getString(R.string.epub_library), getString(R.string.tiff_library), getString(R.string.xps_library));
         showViewPager(view);

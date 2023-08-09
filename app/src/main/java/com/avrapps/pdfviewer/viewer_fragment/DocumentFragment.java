@@ -149,7 +149,7 @@ public class DocumentFragment extends Fragment {
 
     private void setParents(int visibilty) {
         activity.findViewById(R.id.my_toolbar).setVisibility(visibilty);
-        activity.findViewById(R.id.buttonPanel).setVisibility(visibilty);
+        activity.findViewById(R.id.buttonPanel).setVisibility(View.GONE);
     }
 
     void openPDF(Bundle savedInstanceState) {
@@ -237,7 +237,9 @@ public class DocumentFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         openPDF(savedInstanceState);
         checkSDCardPermission();
+        goFullScreen(view.findViewById(R.id.seamlessMode));
     }
+
 
     public void checkSDCardPermission() {
         boolean isPdfFromExternalStorage = false;
@@ -869,6 +871,7 @@ public class DocumentFragment extends Fragment {
         super.onResume();
         Log.d("LifeCycle", "OnResume");
         setParents(View.GONE);
+        showFullScreen();
     }
 
     private void handleBookmarks() {
@@ -907,10 +910,10 @@ public class DocumentFragment extends Fragment {
             mButtonsVisible = true;
             hideButtons();
             if (v != null) {
-                ((ImageView) (v)).setImageResource(R.drawable.ic_fullscreen_white_24dp);
-                params.setMargins(0, 0, 0, 0);
-                if (readerView != null)
-                    readerView.setLayoutParams(params);
+//                ((ImageView) (v)).setImageResource(R.drawable.ic_fullscreen_white_24dp);
+//                params.setMargins(0, 0, 0, 0);
+//                if (readerView != null)
+//                    readerView.setLayoutParams(params);
             }
             showFullScreen();
         }
